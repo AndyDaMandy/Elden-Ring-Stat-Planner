@@ -5,10 +5,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
+    <script defer src="baseStats.js"></script>
+    <script defer src="functions.js"></script>
+    <script defer src="selectors.js"></script>
     <title>Elden Ring Character Attribute Planner</title>
 </head>
 <body>
-    
+    <h1>Elden Ring Character Attribute Planner</h1>
+    <p>Select your class:</p>
+    <button id="vag-btn">Vagabond</button>
+    <button id="war-btn">Warrior</button>
+    <button id="hro-btn">Hero</button>
+    <button id="ban-btn">Bandit</button>
+    <button id="ast-btn">Astrologer</button>
+    <button id="pro-btn">Prophet</button>
+    <button id="sam-btn">Samurai</button>
+    <button id="pri-btn">Prisoner</button>
+    <button id="con-btn">Confessor</button>
+    <button id="wre-btn">Wretch</button>
+    <div>
+        <h3>Base Attributes</h3>
+        <!--Generates base attributes and places into display-base-->
+        <div id="display-base"></div>
+    </div>
+    <div id="display-slot-one" hidden>
+        <!--Displays your choice of class here-->
+    </div>
+    <div id="display-slot-two" hidden>
+        <!--Displays your choice of class here-->
+    </div>
+    <div id="display-slot-three" hidden>
+        <!--Displays your choice of class here-->
+    </div>
+    <div id="stat-boost-btns"hidden>
+        <!--Selecting a button will boost level by 1 and then update display-choice.-->
+        <button>Vigor</button>
+        <button>Mind</button>
+        <button>Endurance</button>
+        <button>Strength</button>
+        <button>Dexterity</button>
+        <button>Intelligence</button>
+        <button>Faith</button>
+        <button>Arcane</button>
+    </div>
 </body>
 </html>
