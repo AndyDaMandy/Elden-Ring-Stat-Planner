@@ -35,3 +35,15 @@ function displayBaseStats(char) {
 let characterSlotOne = [];
 let characterSlotTwo = [];
 let chararacterSlotThree = [];
+
+function addStat(stat) {
+    if (stat === "Vigor"){
+
+    }
+    if (stat === "Endurance"{
+
+    }
+    if (stat === "Mind"){
+        
+    }
+}
