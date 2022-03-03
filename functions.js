@@ -40,10 +40,25 @@ function addStat(stat) {
     if (stat === "Vigor"){
 
     }
-    if (stat === "Endurance"{
+    if (stat === "Endurance"){
 
     }
     if (stat === "Mind"){
+        
+    }
+    if (stat === "Strength"){
+
+    }
+    if (stat === "Dexterity"){
+
+    }
+    if (stat === "Intelligence"){
+
+    }
+    if (stat === "Faith"){
+
+    }
+    if (stat === "Arcane"){
         
     }
 }
