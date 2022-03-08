@@ -9,4 +9,4 @@ document.getElementById("pri-btn").addEventListener('click', () =>{displayBaseSt
 document.getElementById("con-btn").addEventListener('click', () =>{displayBaseStats(confessor)});
 document.getElementById("wre-btn").addEventListener('click', () =>{displayBaseStats(wretch)});
 //slots
-let slotOneData = document.getElementsById('slot')
+let slotOneData = document.getElementById('slot')
