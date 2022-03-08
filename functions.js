@@ -75,22 +75,35 @@ function startCreation() {
 
 function slotOneCheck(){
    let slotCopy = simpleStorage.get("slot-one");
-   if (slotCopy.length != 0){
+   if (slotCopy!== undefined){
        characterSlotOne = slotCopy;
    } else {
         if (characterSlotOne.length === 0){
         document.getElementById("chooseClass-1").hidden = false;
         } else {
-            displaySlotOne.hidden = false;
+          //  displaySlotOne.hidden = false;
         }
     }   
 }
+function slotTwoCheck(){
+    let slotCopy = simpleStorage.get("slot-two");
+    if (slotCopy!== undefined){
+        characterSlotTwo = slotCopy;
+    } else {
+         if (characterSlotTwo.length === 0){
+         document.getElementById("chooseClass-2").hidden = false;
+         } else {
+           //  displaySlotTwo.hidden = false;
+         }
+     }   
+ }
 function generateChar(char, slot){   
    if (slot === 1) {
        slotOneState = 0;
        characterSlotOne.push(char)
-       displaySlotOne(0);
+       displaySlotOne(characterSlotOne[0]);
        document.getElementById('display-slot-one').hidden = false;
+       document.getElementById('chooseClass-1').hidden = true;
     } else if (slot === 2) {
         slotTwoState = 0;
         characterSlotTwo.push(char)
@@ -130,5 +143,5 @@ function displaySlotOne(char) {
     li  = document.createElement('li');
     li.textContent = `Arcane: ${char.arc}`;
     holder.appendChild(li);
-    document.getElementById('display-base').appendChild(holder);
+    document.getElementById('display-slot-one').appendChild(holder);
 }
