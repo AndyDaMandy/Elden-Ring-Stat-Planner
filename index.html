@@ -8,33 +8,76 @@
     <script defer src="baseStats.js"></script>
     <script defer src="functions.js"></script>
     <script defer src="selectors.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/simplestorage.js@0.2.1/simpleStorage.min.js"></script>
     <title>Elden Ring Character Attribute Planner</title>
 </head>
 <body>
-    <h1>Elden Ring Character Attribute Planner</h1>
-    <p>Select your class:</p>
-    <button id="vag-btn">Vagabond</button>
-    <button id="war-btn">Warrior</button>
-    <button id="hro-btn">Hero</button>
-    <button id="ban-btn">Bandit</button>
-    <button id="ast-btn">Astrologer</button>
-    <button id="pro-btn">Prophet</button>
-    <button id="sam-btn">Samurai</button>
-    <button id="pri-btn">Prisoner</button>
-    <button id="con-btn">Confessor</button>
-    <button id="wre-btn">Wretch</button>
     <div>
-        <h3>Base Attributes</h3>
-        <!--Generates base attributes and places into display-base-->
-        <div id="display-base"></div>
+        <h1>Elden Ring Character Attribute Planner</h1>
+        <p>View Class's Base Attributes:</p>
+        <button id="vag-btn">Vagabond</button>
+        <button id="war-btn">Warrior</button>
+        <button id="hro-btn">Hero</button>
+        <button id="ban-btn">Bandit</button>
+        <button id="ast-btn">Astrologer</button>
+        <button id="pro-btn">Prophet</button>
+        <button id="sam-btn">Samurai</button>
+        <button id="pri-btn">Prisoner</button>
+        <button id="con-btn">Confessor</button>
+        <button id="wre-btn">Wretch</button>
+        <div>
+            <h3>Base Attributes</h3>
+            <!--Generates base attributes and places into display-base-->
+            <div id="display-base"></div>
+            <button id="new-char" onclick="startCreation()">Create Character File</button>
+    </div>
     <!-- dom manipulation below-->
     <div id="planner" hidden>
         <div id="slot-buttons">
-            <button id="slot-one">Slot One</button>
+            <button id="slot-one" onclick="slotOneCheck()">Slot One</button>
             <button id="slot-two">Slot Two</button>
             <button id="slot-three">Slot Three</button>
         </div>
+        <div id="chooseClass-1" hidden>
+            <h2>Choose your class for Slot 1</h2>
+            <button onclick="generateChar(vagabond, 1)">Vagabond</button>
+            <button onclick="generateChar(warrior, 1)">Warrior</button>
+            <button onclick="generateChar(hero, 1)">Hero</button>
+            <button onclick="generateChar(bandit, 1)">Bandit</button>
+            <button onclick="generateChar(astrologer, 1)">Astrologer</button>
+            <button onclick="generateChar(prophet, 1)">Prophet</button>
+            <button onclick="generateChar(samurai, 1)">Samurai</button>
+            <button onclick="generateChar(prisoner, 1)">Prisoner</button>
+            <button onclick="generateChar(confessor, 1)">Confessor</button>
+            <button onclick="generateChar(wretch, 1)">Wretch</button>
         </div>
+        <div id="chooseClass-2" hidden>
+            <h2>Choose your class for Slot 2</h2>
+            <button onclick="generateChar(vagabond, 2)">Vagabond</button>
+            <button onclick="generateChar(warrior, 2)">Warrior</button>
+            <button onclick="generateChar(hero, 2)">Hero</button>
+            <button onclick="generateChar(bandit, 2)">Bandit</button>
+            <button onclick="generateChar(astrologer, 2)">Astrologer</button>
+            <button onclick="generateChar(prophet, 2)">Prophet</button>
+            <button onclick="generateChar(samurai, 2)">Samurai</button>
+            <button onclick="generateChar(prisoner, 2)">Prisoner</button>
+            <button onclick="generateChar(confessor, 2)">Confessor</button>
+            <button onclick="generateChar(wretch, 2)">Wretch</button>
+        </div>
+        <div id="chooseClass-3" hidden>
+            <h2>Choose your class for Slot 3</h2>
+            <button onclick="generateChar(vagabond, 3)">Vagabond</button>
+            <button onclick="generateChar(warrior, 3)">Warrior</button>
+            <button onclick="generateChar(hero, 3)">Hero</button>
+            <button onclick="generateChar(bandit, 3)">Bandit</button>
+            <button onclick="generateChar(astrologer, 3)">Astrologer</button>
+            <button onclick="generateChar(prophet, 3)">Prophet</button>
+            <button onclick="generateChar(samurai, 3)">Samurai</button>
+            <button onclick="generateChar(prisoner, 3)">Prisoner</button>
+            <button onclick="generateChar(confessor, 3)">Confessor</button>
+            <button onclick="generateChar(wretch, 3)">Wretch</button>
+        </div>
+    </div>
         <div id="display-slot-one" hidden>
             <!--Displays your choice of class here-->
         </div>

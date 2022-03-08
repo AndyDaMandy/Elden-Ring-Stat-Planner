@@ -35,8 +35,11 @@ function displayBaseStats(char) {
 let characterSlotOne = [];
 let characterSlotTwo = [];
 let chararacterSlotThree = [];
-
-function addStat(stat) {
+let slotOneState = 0;
+let slotTwoState = 0;
+let slotThreeState = 0;
+function addStatOne(stat) {
+    //adds a stat to SlotOne;
     if (stat === "Vigor"){
 
     }
@@ -60,5 +63,33 @@ function addStat(stat) {
     }
     if (stat === "Arcane"){
         
+    }
+}
+
+function startCreation() {
+    //checks if simple storage keys are empty or not first
+    //else
+    document.getElementById("planner").hidden = false;
+    document.getElementById("new-char").hidden = true;
+}
+
+function slotOneCheck(){
+    if (simpleStorage.get("slotOne") === false && characterSlotOne.length === 0){
+       document.getElementById("chooseClass-1").hidden = false;
+    } else {
+        
+    }
+}
+function generateChar(char, slot){   
+   if (slot === 1) {
+       slotOneState = 0;
+       characterSlotOne.push(char)
+
+    } else if (slot === 2) {
+        slotTwoState = 0;
+        characterSlotTwo.push(char)
+    } else if (slot === 3){
+        slotThreeState = 0;
+        chararacterSlotThree.push(char);
     }
 }
