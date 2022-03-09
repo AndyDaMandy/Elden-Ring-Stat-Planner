@@ -37,7 +37,7 @@ function displayBaseStats(char) {
 //It adds 3 character slots.
 let characterSlotOne = [];
 let characterSlotTwo = [];
-let chararacterSlotThree = [];
+let characterSlotThree = [];
 let slotOneState = 0;
 let slotTwoState = 0;
 let slotThreeState = 0;
@@ -74,7 +74,72 @@ function addStatOne(stat) {
     console.log(characterSlotOne);
     displaySlotOne(characterSlotOne[slotOneState]);
 }
-
+function addStatTwo(stat) {
+    //for some reason the array does overwrrites the old ones??? Weird
+    let newLevel = characterSlotTwo[slotTwoState];
+    if (stat === "Vigor"){
+        newLevel.vig++;
+    }
+    if (stat === "Endurance"){
+        newLevel.end++;
+    }
+    if (stat === "Mind"){
+        newLevel.mnd++;
+    }
+    if (stat === "Strength"){
+        newLevel.str++;
+    }
+    if (stat === "Dexterity"){
+        newLevel.dex++;
+    }
+    if (stat === "Intelligence"){
+        newLevel.int++;
+    }
+    if (stat === "Faith"){
+        newLevel.fth++;
+    }
+    if (stat === "Arcane"){
+        newLevel.arc++;
+    }
+    newLevel.lvl ++;
+    characterSlotTwo.push(newLevel);
+    slotTwoState++;
+    console.log(characterSlotTwo);
+    displaySlotTwo(characterSlotTwo[slotTwoState]);
+}
+function addStatThree(stat) {
+    //for some reason the array does overwrrites the old ones??? Weird
+    let newLevel = characterSlotThree[slotThreeState];
+    if (stat === "Vigor"){
+        newLevel.vig++;
+    }
+    if (stat === "Endurance"){
+        newLevel.end++;
+    }
+    if (stat === "Mind"){
+        newLevel.mnd++;
+    }
+    if (stat === "Strength"){
+        newLevel.str++;
+    }
+    if (stat === "Dexterity"){
+        newLevel.dex++;
+    }
+    if (stat === "Intelligence"){
+        newLevel.int++;
+    }
+    if (stat === "Faith"){
+        newLevel.fth++;
+    }
+    if (stat === "Arcane"){
+        newLevel.arc++;
+    }
+    newLevel.lvl ++;
+    characterSlotThree.push(newLevel);
+    slotThreeState++;
+    console.log(characterSlotThree);
+    displaySlotThree(characterSlotThree[slotThreeState]);
+}
 function startCreation() {
     //checks if simple storage keys are empty or not first
     //else
@@ -92,9 +157,16 @@ function generateChar(char, slot){
      } else if (slot === 2) {
          slotTwoState = 0;
          characterSlotTwo.push(char)
+         displaySlotTwo(characterSlotTwo[0]);
+         document.getElementById('display-slot-two').hidden = false;
+         document.getElementById('chooseClass-2').hidden = true;
+         
      } else if (slot === 3){
          slotThreeState = 0;
-         chararacterSlotThree.push(char);
+         characterSlotThree.push(char);
+         displaySlotThree(characterSlotThree[0]);
+         document.getElementById('display-slot-three').hidden = false;
+         document.getElementById('chooseClass-3').hidden = true;
      }
  }
 
@@ -122,7 +194,18 @@ function slotTwoCheck(){
          }
      }   
  }
-
+ function slotThreeCheck(){
+    let slotCopy = simpleStorage.get("slot-three");
+    if (slotCopy!== undefined){
+        characterSlotThree = slotCopy;
+    } else {
+         if (characterSlotThree.length === 0){
+         document.getElementById("chooseClass-3").hidden = false;
+         } else {
+           //  displaySlotTwo.hidden = false;
+         }
+     }   
+ }
 
 function displaySlotOne(char) {
     document.getElementById('display-slot-one').innerHTML = "";
@@ -162,4 +245,82 @@ function displaySlotOne(char) {
     document.getElementById('display-slot-one').appendChild(intro)
     document.getElementById('display-slot-one').appendChild(holder);
     document.getElementById('stat-boost-1').hidden = false;
+}
+function displaySlotTwo(char) {
+    document.getElementById('display-slot-two').innerHTML = "";
+    let intro = document.createElement("h3");
+    intro.innerText = "Slot 2 Character Information:";
+    let holder = document.createElement("ul");
+    let li  = document.createElement('li');
+    li.textContent = `Class: ${char.className}`;
+    holder.appendChild(li);
+    li  = document.createElement('li');
+    li.textContent = `Level: ${char.lvl}`;
+    holder.appendChild(li);
+    li  = document.createElement('li');
+    li.textContent = `Vigor: ${char.vig}`;
+    holder.appendChild(li);
+    li  = document.createElement('li');
+    li.textContent = `Mind: ${char.mnd}`;
+    holder.appendChild(li);
+    li  = document.createElement('li');
+    li.textContent = `Endurance: ${char.end}`;
+    holder.appendChild(li);
+    li  = document.createElement('li');
+    li.textContent = `Strength: ${char.str}`;
+    holder.appendChild(li);
+    li  = document.createElement('li');
+    li.textContent = `Dexterity: ${char.dex}`;
+    holder.appendChild(li);
+    li  = document.createElement('li');
+    li.textContent = `Intelligence: ${char.int}`;
+    holder.appendChild(li);
+    li  = document.createElement('li');
+    li.textContent = `Faith: ${char.fth}`;
+    holder.appendChild(li);
+    li  = document.createElement('li');
+    li.textContent = `Arcane: ${char.arc}`;
+    holder.appendChild(li);
+    document.getElementById('display-slot-two').appendChild(intro)
+    document.getElementById('display-slot-two').appendChild(holder);
+    document.getElementById('stat-boost-2').hidden = false;
+}
+function displaySlotThree(char) {
+    document.getElementById('display-slot-three').innerHTML = "";
+    let intro = document.createElement("h3");
+    intro.innerText = "Slot 3 Character Information:";
+    let holder = document.createElement("ul");
+    let li  = document.createElement('li');
+    li.textContent = `Class: ${char.className}`;
+    holder.appendChild(li);
+    li  = document.createElement('li');
+    li.textContent = `Level: ${char.lvl}`;
+    holder.appendChild(li);
+    li  = document.createElement('li');
+    li.textContent = `Vigor: ${char.vig}`;
+    holder.appendChild(li);
+    li  = document.createElement('li');
+    li.textContent = `Mind: ${char.mnd}`;
+    holder.appendChild(li);
+    li  = document.createElement('li');
+    li.textContent = `Endurance: ${char.end}`;
+    holder.appendChild(li);
+    li  = document.createElement('li');
+    li.textContent = `Strength: ${char.str}`;
+    holder.appendChild(li);
+    li  = document.createElement('li');
+    li.textContent = `Dexterity: ${char.dex}`;
+    holder.appendChild(li);
+    li  = document.createElement('li');
+    li.textContent = `Intelligence: ${char.int}`;
+    holder.appendChild(li);
+    li  = document.createElement('li');
+    li.textContent = `Faith: ${char.fth}`;
+    holder.appendChild(li);
+    li  = document.createElement('li');
+    li.textContent = `Arcane: ${char.arc}`;
+    holder.appendChild(li);
+    document.getElementById('display-slot-three').appendChild(intro)
+    document.getElementById('display-slot-three').appendChild(holder);
+    document.getElementById('stat-boost-3').hidden = false;
 }
