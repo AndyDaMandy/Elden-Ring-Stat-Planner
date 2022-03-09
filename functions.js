@@ -14,6 +14,9 @@ function displayBaseStats(char) {
     li.textContent = `Mind: ${char.mnd}`;
     holder.appendChild(li);
     li  = document.createElement('li');
+    li.textContent = `Endurance: ${char.end}`;
+    holder.appendChild(li);
+    li  = document.createElement('li');
     li.textContent = `Strength: ${char.str}`;
     holder.appendChild(li);
     li  = document.createElement('li');
@@ -39,31 +42,37 @@ let slotOneState = 0;
 let slotTwoState = 0;
 let slotThreeState = 0;
 function addStatOne(stat) {
-    //adds a stat to SlotOne;
+    //for some reason the array does overwrrites the old ones??? Weird
+    let newLevel = characterSlotOne[slotOneState];
     if (stat === "Vigor"){
-
+        newLevel.vig++;
     }
     if (stat === "Endurance"){
-
+        newLevel.end++;
     }
     if (stat === "Mind"){
-        
+        newLevel.mnd++;
     }
     if (stat === "Strength"){
-
+        newLevel.str++;
     }
     if (stat === "Dexterity"){
-
+        newLevel.dex++;
     }
     if (stat === "Intelligence"){
-
+        newLevel.int++;
     }
     if (stat === "Faith"){
-
+        newLevel.fth++;
     }
     if (stat === "Arcane"){
-        
+        newLevel.arc++;
     }
+    newLevel.lvl ++;
+    characterSlotOne.push(newLevel);
+    slotOneState++;
+    console.log(characterSlotOne);
+    displaySlotOne(characterSlotOne[slotOneState]);
 }
 
 function startCreation() {
@@ -72,6 +81,22 @@ function startCreation() {
     document.getElementById("planner").hidden = false;
     document.getElementById("new-char").hidden = true;
 }
+
+function generateChar(char, slot){   
+    if (slot === 1) {
+        slotOneState = 0;
+        characterSlotOne.push(char)
+        displaySlotOne(characterSlotOne[0]);
+        document.getElementById('display-slot-one').hidden = false;
+        document.getElementById('chooseClass-1').hidden = true;
+     } else if (slot === 2) {
+         slotTwoState = 0;
+         characterSlotTwo.push(char)
+     } else if (slot === 3){
+         slotThreeState = 0;
+         chararacterSlotThree.push(char);
+     }
+ }
 
 function slotOneCheck(){
    let slotCopy = simpleStorage.get("slot-one");
@@ -97,24 +122,12 @@ function slotTwoCheck(){
          }
      }   
  }
-function generateChar(char, slot){   
-   if (slot === 1) {
-       slotOneState = 0;
-       characterSlotOne.push(char)
-       displaySlotOne(characterSlotOne[0]);
-       document.getElementById('display-slot-one').hidden = false;
-       document.getElementById('chooseClass-1').hidden = true;
-    } else if (slot === 2) {
-        slotTwoState = 0;
-        characterSlotTwo.push(char)
-    } else if (slot === 3){
-        slotThreeState = 0;
-        chararacterSlotThree.push(char);
-    }
-}
+
 
 function displaySlotOne(char) {
     document.getElementById('display-slot-one').innerHTML = "";
+    let intro = document.createElement("h3");
+    intro.innerText = "Slot 1 Character Information:";
     let holder = document.createElement("ul");
     let li  = document.createElement('li');
     li.textContent = `Class: ${char.className}`;
@@ -127,6 +140,9 @@ function displaySlotOne(char) {
     holder.appendChild(li);
     li  = document.createElement('li');
     li.textContent = `Mind: ${char.mnd}`;
+    holder.appendChild(li);
+    li  = document.createElement('li');
+    li.textContent = `Endurance: ${char.end}`;
     holder.appendChild(li);
     li  = document.createElement('li');
     li.textContent = `Strength: ${char.str}`;
@@ -143,5 +159,7 @@ function displaySlotOne(char) {
     li  = document.createElement('li');
     li.textContent = `Arcane: ${char.arc}`;
     holder.appendChild(li);
+    document.getElementById('display-slot-one').appendChild(intro)
     document.getElementById('display-slot-one').appendChild(holder);
+    document.getElementById('stat-boost-1').hidden = false;
 }

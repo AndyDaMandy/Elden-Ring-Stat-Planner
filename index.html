@@ -33,6 +33,8 @@
     </div>
     <!-- dom manipulation below-->
     <div id="planner" hidden>
+        <h2>Character Slots</h2>
+        <p><em>Select a Character slot</em></p>
         <div id="slot-buttons">
             <button id="slot-one" onclick="slotOneCheck()">Slot One</button>
             <button id="slot-two">Slot Two</button>
@@ -87,7 +89,31 @@
         <div id="display-slot-three" hidden>
             <!--Displays your choice of class here-->
         </div>
-        <div id="stat-boost-btns"hidden>
+        <div id="stat-boost-1"hidden>
+            <!--Selecting a button will boost level by 1 and then update display-choice.-->
+            <h3>Attributes to level:</h3>
+            <p><em>Please select an attribute to level, your level will go up by 1 when you do</em></p>
+            <button onclick="addStatOne('Vigor')">Vigor</button>
+            <button onclick="addStatOne('Mind')">Mind</button>
+            <button onclick="addStatOne('Endurance')">Endurance</button>
+            <button onclick="addStatOne('Strength')">Strength</button>
+            <button onclick="addStatOne('Dexterity')">Dexterity</button>
+            <button onclick="addStatOne('Intelligence')">Intelligence</button>
+            <button onclick="addStatOne('Faith')">Faith</button>
+            <button onclick="addStatOne('Arcane')">Arcane</button>
+        </div>
+        <div id="stat-boost-2"hidden>
+            <!--Selecting a button will boost level by 1 and then update display-choice.-->
+            <button>Vigor</button>
+            <button>Mind</button>
+            <button>Endurance</button>
+            <button>Strength</button>
+            <button>Dexterity</button>
+            <button>Intelligence</button>
+            <button>Faith</button>
+            <button>Arcane</button>
+        </div>
+        <div id="stat-boost-3"hidden>
             <!--Selecting a button will boost level by 1 and then update display-choice.-->
             <button>Vigor</button>
             <button>Mind</button>
