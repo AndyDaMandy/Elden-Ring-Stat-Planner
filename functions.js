@@ -179,14 +179,18 @@ function slotOneCheck(){
    if (slotCopy!== undefined){
        characterSlotOne = slotCopy;
        slotOneState = slotStateCopy;
+       if (slotOneState === 0){
+        document.getElementById("chooseClass-1").hidden = false;
+       } else {
        displaySlotOne(characterSlotOne[slotOneState]);
        document.getElementById('display-slot-one').hidden = false;
        document.getElementById('chooseClass-1').hidden = true;
+       }
    } else {
         if (characterSlotOne.length === 0){
-        document.getElementById("chooseClass-1").hidden = false;
+            document.getElementById("chooseClass-1").hidden = false;
         } else {
-          //  displaySlotOne.hidden = false;
+            document.getElementById('display-slot-one').hidden = false;
         }
     }   
 }
@@ -196,14 +200,18 @@ function slotTwoCheck(){
     if (slotCopy!== undefined){
         characterSlotTwo = slotCopy;
         slotTwoState = slotStateCopy;
-        displaySlotTwo(characterSlotTwo[slotTwoState]);
-         document.getElementById('display-slot-two').hidden = false;
-         document.getElementById('chooseClass-2').hidden = true;
+        if (slotTwoState === 0){
+            document.getElementById("chooseClass-2").hidden = false;    
+        } else {
+            displaySlotTwo(characterSlotTwo[slotTwoState]);
+            document.getElementById('display-slot-two').hidden = false;
+            document.getElementById('chooseClass-2').hidden = true;
+        }
     } else {
          if (characterSlotTwo.length === 0){
-         document.getElementById("chooseClass-2").hidden = false;
+            document.getElementById("chooseClass-2").hidden = false;
          } else {
-           //  displaySlotTwo.hidden = false;
+            document.getElementById('display-slot-two').hidden = false;
          }
      }   
  }
@@ -213,14 +221,18 @@ function slotTwoCheck(){
     if (slotCopy!== undefined){
         characterSlotThree = slotCopy;
         slotThreeState = slotStateCopy;
-        displaySlotThree(characterSlotThree[slotThreeState]);
-         document.getElementById('display-slot-three').hidden = false;
-         document.getElementById('chooseClass-3').hidden = true;
+        if (slotThreeState === 0){
+            document.getElementById("chooseClass-3").hidden = false; 
+        } else {
+            displaySlotThree(characterSlotThree[slotThreeState]);
+            document.getElementById('display-slot-three').hidden = false;
+            document.getElementById('chooseClass-3').hidden = true;
+        }
     } else {
          if (characterSlotThree.length === 0){
-         document.getElementById("chooseClass-3").hidden = false;
+            document.getElementById("chooseClass-3").hidden = false;
          } else {
-           //  displaySlotTwo.hidden = false;
+            document.getElementById('display-slot-three').hidden = false;
          }
      }   
  }
