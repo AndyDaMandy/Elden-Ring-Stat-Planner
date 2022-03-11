@@ -179,7 +179,7 @@ function slotOneCheck(){
    if (slotCopy!== undefined){
        characterSlotOne = slotCopy;
        slotOneState = slotStateCopy;
-       if (slotOneState === 0){
+       if (characterSlotOne.length === 0){
         document.getElementById("chooseClass-1").hidden = false;
        } else {
        displaySlotOne(characterSlotOne[slotOneState]);
@@ -200,7 +200,7 @@ function slotTwoCheck(){
     if (slotCopy!== undefined){
         characterSlotTwo = slotCopy;
         slotTwoState = slotStateCopy;
-        if (slotTwoState === 0){
+        if (characterSlotTwo.length === 0){
             document.getElementById("chooseClass-2").hidden = false;    
         } else {
             displaySlotTwo(characterSlotTwo[slotTwoState]);
@@ -221,7 +221,7 @@ function slotTwoCheck(){
     if (slotCopy!== undefined){
         characterSlotThree = slotCopy;
         slotThreeState = slotStateCopy;
-        if (slotThreeState === 0){
+        if (characterSlotThree.length === 0){
             document.getElementById("chooseClass-3").hidden = false; 
         } else {
             displaySlotThree(characterSlotThree[slotThreeState]);
