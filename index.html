@@ -15,6 +15,7 @@
     <div>
         <h1>Elden Ring Character Attribute Planner</h1>
         <h2>View Class's Base Attributes:</h2>
+        <p><em>Click classes to view their base attributes</em></p>
         <button id="vag-btn">Vagabond</button>
         <button id="war-btn">Warrior</button>
         <button id="hro-btn">Hero</button>
@@ -26,19 +27,20 @@
         <button id="con-btn">Confessor</button>
         <button id="wre-btn">Wretch</button>
         <div>
-            <h3>Base Attributes</h3>
             <!--Generates base attributes and places into display-base-->
             <div id="display-base"></div>
-            <button id="new-char" onclick="startCreation()">Create Character File</button>
+            <hr>
     </div>
     <!-- dom manipulation below-->
-    <div id="planner" hidden>
+    <div id="planner">
         <h2>Character Slots</h2>
-        <p><em>Select a Character slot</em></p>
+        <p><em>Select a Character slot to either load your saved slots or start a new one</em></p>
         <div id="slot-buttons">
             <button id="slot-one" onclick="slotOneCheck()">Slot One</button>
             <button id="slot-two" onclick="slotTwoCheck()">Slot Two</button>
             <button id="slot-three" onclick="slotThreeCheck()">Slot Three</button>
+            <button id="save-button" onclick="saveData()">Save Slot-Data</button>
+            <button id="clear-button" onclick="clearData()">Clear Save Data</button>
         </div>
         <div id="chooseClass-1" hidden>
             <h2>Choose your Class for Slot 1</h2>

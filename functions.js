@@ -2,6 +2,8 @@ function displayBaseStats(char) {
     document.getElementById('display-base').innerHTML = "";
     let holder = document.createElement("ul");
     let li  = document.createElement('li');
+    let baseAt = document.createElement("h3");
+    baseAt.innerText = "Base Attributes";
     li.textContent = `Class: ${char.className}`;
     holder.appendChild(li);
     li  = document.createElement('li');
@@ -31,6 +33,7 @@ function displayBaseStats(char) {
     li  = document.createElement('li');
     li.textContent = `Arcane: ${char.arc}`;
     holder.appendChild(li);
+    document.getElementById('display-base').appendChild(baseAt);
     document.getElementById('display-base').appendChild(holder);
 }
 //the idea is to create an array that keeps track of the "state" of the character stats. If the player adds a level, it pushes that new state into the array. There will be a level "selector, that increases based on state". This is important because we want players to be able to go back.
@@ -43,7 +46,7 @@ let slotTwoState = 0;
 let slotThreeState = 0;
 function addStatOne(stat) {
     //for some reason the array does overwrrites the old ones??? Weird
-    let newLevel = characterSlotOne[slotOneState];
+   let newLevel = Object.assign({},characterSlotOne[slotOneState])
     if (stat === "Vigor"){
         newLevel.vig++;
     }
@@ -76,7 +79,7 @@ function addStatOne(stat) {
 }
 function addStatTwo(stat) {
     //for some reason the array does overwrrites the old ones??? Weird
-    let newLevel = characterSlotTwo[slotTwoState];
+    let newLevel = Object.assign({},characterSlotTwo[slotTwoState]);
     if (stat === "Vigor"){
         newLevel.vig++;
     }
@@ -109,7 +112,7 @@ function addStatTwo(stat) {
 }
 function addStatThree(stat) {
     //for some reason the array does overwrrites the old ones??? Weird
-    let newLevel = characterSlotThree[slotThreeState];
+    let newLevel = Object.assign({}, characterSlotThree[slotThreeState]);
     if (stat === "Vigor"){
         newLevel.vig++;
     }
@@ -171,9 +174,14 @@ function generateChar(char, slot){
  }
 
 function slotOneCheck(){
-   let slotCopy = simpleStorage.get("slot-one");
+   let slotCopy = simpleStorage.get("slot-1");
+   let slotStateCopy = simpleStorage.get("slot-1-state");
    if (slotCopy!== undefined){
        characterSlotOne = slotCopy;
+       slotOneState = slotStateCopy;
+       displaySlotOne(characterSlotOne[slotOneState]);
+       document.getElementById('display-slot-one').hidden = false;
+       document.getElementById('chooseClass-1').hidden = true;
    } else {
         if (characterSlotOne.length === 0){
         document.getElementById("chooseClass-1").hidden = false;
@@ -183,9 +191,14 @@ function slotOneCheck(){
     }   
 }
 function slotTwoCheck(){
-    let slotCopy = simpleStorage.get("slot-two");
+    let slotCopy = simpleStorage.get("slot-2");
+    let slotStateCopy = simpleStorage.get("slot-2-state");
     if (slotCopy!== undefined){
         characterSlotTwo = slotCopy;
+        slotTwoState = slotStateCopy;
+        displaySlotTwo(characterSlotTwo[slotTwoState]);
+         document.getElementById('display-slot-two').hidden = false;
+         document.getElementById('chooseClass-2').hidden = true;
     } else {
          if (characterSlotTwo.length === 0){
          document.getElementById("chooseClass-2").hidden = false;
@@ -195,9 +208,14 @@ function slotTwoCheck(){
      }   
  }
  function slotThreeCheck(){
-    let slotCopy = simpleStorage.get("slot-three");
+    let slotCopy = simpleStorage.get("slot-3");
+    let slotStateCopy = simpleStorage.get("slot-3-state");
     if (slotCopy!== undefined){
         characterSlotThree = slotCopy;
+        slotThreeState = slotStateCopy;
+        displaySlotThree(characterSlotThree[slotThreeState]);
+         document.getElementById('display-slot-three').hidden = false;
+         document.getElementById('chooseClass-3').hidden = true;
     } else {
          if (characterSlotThree.length === 0){
          document.getElementById("chooseClass-3").hidden = false;
@@ -323,4 +341,28 @@ function displaySlotThree(char) {
     document.getElementById('display-slot-three').appendChild(intro)
     document.getElementById('display-slot-three').appendChild(holder);
     document.getElementById('stat-boost-3').hidden = false;
+}
+
+function saveData(){
+    simpleStorage.set("slot-1", characterSlotOne);
+    simpleStorage.set("slot-1-state", slotOneState);
+    simpleStorage.set("slot-2", characterSlotTwo);
+    simpleStorage.set("slot-2-state", slotTwoState);
+    simpleStorage.set("slot-3", characterSlotThree);
+    simpleStorage.set("slot-3-state", slotThreeState);
+}
+function clearData(){
+    simpleStorage.flush();
+    characterSlotOne = [];
+    characterSlotTwo = [];
+    characterSlotThree = [];
+    slotOneState = 0;
+    slotTwoState = 0;
+    slotThreeState = 0;
+    document.getElementById("display-slot-one").hidden = true;
+    document.getElementById("stat-boost-1").hidden = true;
+    document.getElementById("display-slot-two").hidden = true;
+    document.getElementById("stat-boost-2").hidden = true;
+    document.getElementById("display-slot-three").hidden = true;
+    document.getElementById("stat-boost-3").hidden = true;
 }

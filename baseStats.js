@@ -12,6 +12,20 @@ class Character {
         this.arc = arc;
     }
 }
+/*
+const vagabond = {
+    className: 'Vagabond',
+    lvl: 9,
+    vig: 15,
+    mnd: 10,
+    end: 11,
+    str: 14,
+    dex: 13,
+    int: 9,
+    fth: 9,
+    arc: 7
+}
+*/
 const vagabond = new Character('Vagabond', 9, 15, 10, 11, 14, 13, 9, 9, 7);
 const warrior = new Character('Warrior', 8, 11, 12, 11, 10, 16, 10, 8, 9);
 const hero = new Character('Hero', 7, 14, 9, 12, 16, 9, 7, 8, 11);
