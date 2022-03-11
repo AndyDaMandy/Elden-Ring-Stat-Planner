@@ -350,6 +350,7 @@ function saveData(){
     simpleStorage.set("slot-2-state", slotTwoState);
     simpleStorage.set("slot-3", characterSlotThree);
     simpleStorage.set("slot-3-state", slotThreeState);
+    alert("Your Data has been saved!");
 }
 function clearData(){
     simpleStorage.flush();
@@ -365,4 +366,5 @@ function clearData(){
     document.getElementById("stat-boost-2").hidden = true;
     document.getElementById("display-slot-three").hidden = true;
     document.getElementById("stat-boost-3").hidden = true;
+    alert("Your Data has been cleared!");
 }
