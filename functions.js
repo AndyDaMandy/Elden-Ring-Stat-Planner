@@ -364,6 +364,21 @@ function saveData(){
     simpleStorage.set("slot-3-state", slotThreeState);
     alert("Your Data has been saved!");
 }
+function saveOne(){
+    simpleStorage.set("slot-1", characterSlotOne);
+    simpleStorage.set("slot-1-state", slotOneState);
+    alert("Slot One has been saved!");
+}
+function saveTwo(){
+    simpleStorage.set("slot-2", characterSlotTwo);
+    simpleStorage.set("slot-2-state", slotTwoState);
+    alert("Slot Two has been saved!");
+}
+function saveThree(){
+    simpleStorage.set("slot-3", characterSlotThree);
+    simpleStorage.set("slot-3-state", slotThreeState);
+    alert("Slot Three has been saved!");
+}
 function clearData(){
     simpleStorage.flush();
     characterSlotOne = [];
@@ -379,6 +394,33 @@ function clearData(){
     document.getElementById("display-slot-three").hidden = true;
     document.getElementById("stat-boost-3").hidden = true;
     alert("Your Data has been cleared!");
+}
+function clearOne(){
+    simpleStorage.deleteKey("slot-1");
+    simpleStorage.deleteKey("slot-1-state");
+    characterSlotOne = [];
+    slotOneState = 0;
+    document.getElementById("display-slot-one").hidden = true;
+    document.getElementById("stat-boost-1").hidden = true;
+    alert("Slot One has been cleared!");
+}
+function clearTwo(){
+    simpleStorage.deleteKey("slot-2");
+    simpleStorage.deleteKey("slot-2-state");
+    characterSlotTwo = [];
+    slotTwoState = 0;
+    document.getElementById("display-slot-two").hidden = true;
+    document.getElementById("stat-boost-2").hidden = true;
+    alert("Slot Two has been cleared!");
+}
+function clearThree(){
+    simpleStorage.deleteKey("slot-3");
+    simpleStorage.deleteKey("slot-3-state");
+    characterSlotThree = [];
+    slotThreeState = 0;
+    document.getElementById("display-slot-three").hidden = true;
+    document.getElementById("stat-boost-3").hidden = true;
+    alert("Slot Three has been cleared!");
 }
 
 function backOne(){

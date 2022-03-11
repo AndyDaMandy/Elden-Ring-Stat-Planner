@@ -32,6 +32,23 @@
             <hr>
     </div>
     <!-- dom manipulation below-->
+    <div id="save-delete" hidden>
+        <h2>Save/Delete Data</h2>
+        <p><em>Saving and loading uses local storage If you clear your browser data you will lose your data!</em></p>
+        <button onclick="document.getElementById('save-delete').hidden = true">Close Save/Delete Menu</button>
+        <h3>Save Buttons</h3>
+        <button id="save-button" onclick="saveData()">Save All Slot-Data</button>
+        <button onclick="saveOne()">Save Slot 1</button>
+        <button onclick="saveTwo()">Save Slot 2</button>
+        <button onclick="saveThree()">Save Slot 3</button>
+        <h3>Delete Buttons</h3>
+        <p><em>Warning! You cannot undo a delete! Be careful with your selection!</em></p>
+        <button id="clear-button" onclick="clearData()">Clear All Slot-Data</button>
+        <button onclick="clearOne()">Clear Slot 1</button>
+        <button onclick="clearTwo()">Clear Slot 2</button>
+        <button onclick="clearThree()">Clear Slot 3</button>
+        <hr>
+    </div>
     <div id="planner">
         <h2>Character Slots</h2>
         <p><em>Select a Character slot to either load your saved slots or start a new one</em></p>
@@ -39,8 +56,8 @@
             <button id="slot-one" onclick="slotOneCheck()">Slot One</button>
             <button id="slot-two" onclick="slotTwoCheck()">Slot Two</button>
             <button id="slot-three" onclick="slotThreeCheck()">Slot Three</button>
-            <button id="save-button" onclick="saveData()">Save Slot-Data</button>
-            <button id="clear-button" onclick="clearData()">Clear Save Data</button>
+            <button id="show save" onclick="document.getElementById('save-delete').hidden = false">Save or Delete Slot Data</button>
+            
         </div>
         <div id="chooseClass-1" hidden>
             <h2>Choose your Class for Slot 1</h2>
