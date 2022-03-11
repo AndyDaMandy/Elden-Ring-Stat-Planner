@@ -368,3 +368,31 @@ function clearData(){
     document.getElementById("stat-boost-3").hidden = true;
     alert("Your Data has been cleared!");
 }
+
+function backOne(){
+    if (slotOneState === 0){
+        alert("You can't go below your starting level!");
+    } else {
+    characterSlotOne.splice(slotOneState, 1);
+    slotOneState--;
+    displaySlotOne(characterSlotOne[slotOneState]);
+    }
+}
+function backTwo(){
+    if (slotTwoState === 0){
+        alert("You can't go below your starting level!");
+    } else {
+    characterSlotTwo.splice(slotTwoState, 1);
+    slotTwoState--;
+    displaySlotTwo(characterSlotTwo[slotTwoState]);
+    }
+}
+function backThree(){
+    if (slotThreeState === 0){
+        alert("You can't go below your starting level!");
+    } else {
+    characterSlotThree.splice(slotThreeState, 1);
+    slotThreeState--;
+    displaySlotThree(characterSlotThree[slotThreeState]);
+    }
+}
