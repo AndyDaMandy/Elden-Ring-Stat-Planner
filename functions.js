@@ -47,61 +47,61 @@ let slotThreeState = 0;
 function addStatOne(stat) {
     //for some reason the array does overwrrites the old ones??? Weird
    let newLevel = Object.assign({},characterSlotOne[slotOneState])
-   if (newLevel.lvl === 713){
-       alert("You've hit the level cap in Elden Ring")
+   if (newLevel.lvl >= 713){
+      return alert("You've hit the level cap in Elden Ring")
    } else {
     if (stat === "Vigor"){
-        if (newLevel.vig === 99){
-            alert("You cannot level an attribute past 99, please select a new one")
+        if (newLevel.vig >= 99){
+          return  alert("You cannot level an attribute past 99, please select a new one")
         } else {
         newLevel.vig++;
         }
     }
     if (stat === "Endurance"){
-        if (newLevel.end === 99){
-            alert("You cannot level an attribute past 99, please select a new one")
+        if (newLevel.end >= 99){
+          return  alert("You cannot level an attribute past 99, please select a new one")
         } else {
         newLevel.end++;
         }
     }
     if (stat === "Mind"){
-        if (newLevel.mnd === 99){
-            alert("You cannot level an attribute past 99, please select a new one")
+        if (newLevel.mnd >= 99){
+           return alert("You cannot level an attribute past 99, please select a new one")
         } else {
         newLevel.mnd++;
         }
     }
     if (stat === "Strength"){
-        if (newLevel.str === 99){
-            alert("You cannot level an attribute past 99, please select a new one")
+        if (newLevel.str >= 99){
+           return alert("You cannot level an attribute past 99, please select a new one")
         } else {
         newLevel.str++;
         }
     }
     if (stat === "Dexterity"){
-        if (newLevel.dex === 99){
-            alert("You cannot level an attribute past 99, please select a new one")
+        if (newLevel.dex >= 99){
+           return alert("You cannot level an attribute past 99, please select a new one")
         } else {
         newLevel.dex++;
         }
     }
     if (stat === "Intelligence"){
-        if (newLevel.int === 99){
-            alert("You cannot level an attribute past 99, please select a new one")
+        if (newLevel.int >= 99){
+          return  alert("You cannot level an attribute past 99, please select a new one")
         } else {
         newLevel.int++;
         }
     }
     if (stat === "Faith"){
-        if (newLevel.fth === 99){
-            alert("You cannot level an attribute past 99, please select a new one")
+        if (newLevel.fth >= 99){
+           return alert("You cannot level an attribute past 99, please select a new one")
         } else {
         newLevel.fth++;
         }
     }
     if (stat === "Arcane"){
-        if (newLevel.arc === 99){
-            alert("You cannot level an attribute past 99, please select a new one")
+        if (newLevel.arc >= 99){
+           return alert("You cannot level an attribute past 99, please select a new one")
         } else {
         newLevel.arc++;
         }
@@ -114,61 +114,61 @@ function addStatOne(stat) {
 }
 function addStatTwo(stat) {
     let newLevel = Object.assign({},characterSlotTwo[slotTwoState]);
-    if (newLevel.lvl === 713){
+    if (newLevel.lvl >= 713){
         alert("You've hit the level cap in Elden Ring")
     } else {
     if (stat === "Vigor"){
-        if (newLevel.vig === 99){
-            alert("You cannot level an attribute past 99, please select a new one")
+        if (newLevel.vig >= 99){
+           return alert("You cannot level an attribute past 99, please select a new one")
         } else {
         newLevel.vig++;
         }
     }
     if (stat === "Endurance"){
-        if (newLevel.end === 99){
-            alert("You cannot level an attribute past 99, please select a new one")
+        if (newLevel.end >= 99){
+           return alert("You cannot level an attribute past 99, please select a new one")
         } else {
         newLevel.end++;
         }
     }
     if (stat === "Mind"){
-        if (newLevel.mnd === 99){
-            alert("You cannot level an attribute past 99, please select a new one")
+        if (newLevel.mnd >= 99){
+           return alert("You cannot level an attribute past 99, please select a new one")
         } else {
         newLevel.mnd++;
         }
     }
     if (stat === "Strength"){
-        if (newLevel.str === 99){
-            alert("You cannot level an attribute past 99, please select a new one")
+        if (newLevel.str >= 99){
+           return alert("You cannot level an attribute past 99, please select a new one")
         } else {
         newLevel.str++;
         }
     }
     if (stat === "Dexterity"){
-        if (newLevel.dex === 99){
-            alert("You cannot level an attribute past 99, please select a new one")
+        if (newLevel.dex >= 99){
+        return    alert("You cannot level an attribute past 99, please select a new one")
         } else {
         newLevel.dex++;
         }
     }
     if (stat === "Intelligence"){
-        if (newLevel.int === 99){
-            alert("You cannot level an attribute past 99, please select a new one")
+        if (newLevel.int >= 99){
+         return   alert("You cannot level an attribute past 99, please select a new one")
         } else {
         newLevel.int++;
         }
     }
     if (stat === "Faith"){
-        if (newLevel.fth === 99){
-            alert("You cannot level an attribute past 99, please select a new one")
+        if (newLevel.fth >= 99){
+         return   alert("You cannot level an attribute past 99, please select a new one")
         } else {
         newLevel.fth++;
         }
     }
     if (stat === "Arcane"){
-        if (newLevel.arc === 99){
-            alert("You cannot level an attribute past 99, please select a new one")
+        if (newLevel.arc >= 99){
+          return  alert("You cannot level an attribute past 99, please select a new one")
         } else {
         newLevel.arc++;
         }
@@ -182,61 +182,61 @@ function addStatTwo(stat) {
 function addStatThree(stat) {
     //for some reason the array does overwrrites the old ones??? Weird
     let newLevel = Object.assign({}, characterSlotThree[slotThreeState]);
-    if (newLevel.lvl === 713){
-        alert("You've hit the level cap in Elden Ring")
+    if (newLevel.lvl >= 713){
+       return alert("You've hit the level cap in Elden Ring")
     } else {
     if (stat === "Vigor"){
-        if (newLevel.vig === 99){
-            alert("You cannot level an attribute past 99, please select a new one")
+        if (newLevel.vig >= 99){
+         return   alert("You cannot level an attribute past 99, please select a new one")
         } else {
         newLevel.vig++;
         }
     }
     if (stat === "Endurance"){
-        if (newLevel.end === 99){
-            alert("You cannot level an attribute past 99, please select a new one")
+        if (newLevel.end >= 99){
+         return   alert("You cannot level an attribute past 99, please select a new one")
         } else {
         newLevel.end++;
         }
     }
     if (stat === "Mind"){
-        if (newLevel.mnd === 99){
-            alert("You cannot level an attribute past 99, please select a new one")
+        if (newLevel.mnd >= 99){
+          return  alert("You cannot level an attribute past 99, please select a new one")
         } else {
         newLevel.mnd++;
         }
     }
     if (stat === "Strength"){
-        if (newLevel.str === 99){
-            alert("You cannot level an attribute past 99, please select a new one")
+        if (newLevel.str >= 99){
+          return  alert("You cannot level an attribute past 99, please select a new one")
         } else {
         newLevel.str++;
         }
     }
     if (stat === "Dexterity"){
-        if (newLevel.dex === 99){
+        if (newLevel.dex >= 99){
             alert("You cannot level an attribute past 99, please select a new one")
         } else {
         newLevel.dex++;
         }
     }
     if (stat === "Intelligence"){
-        if (newLevel.int === 99){
-            alert("You cannot level an attribute past 99, please select a new one")
+        if (newLevel.int >= 99){
+          return  alert("You cannot level an attribute past 99, please select a new one")
         } else {
         newLevel.int++;
         }
     }
     if (stat === "Faith"){
-        if (newLevel.fth === 99){
-            alert("You cannot level an attribute past 99, please select a new one")
+        if (newLevel.fth >= 99){
+          return  alert("You cannot level an attribute past 99, please select a new one")
         } else {
         newLevel.fth++;
         }
     }
     if (stat === "Arcane"){
-        if (newLevel.arc === 99){
-            alert("You cannot level an attribute past 99, please select a new one")
+        if (newLevel.arc >= 99){
+          return  alert("You cannot level an attribute past 99, please select a new one")
         } else {
         newLevel.arc++;
         }
@@ -528,7 +528,7 @@ function clearThree(){
 }
 
 function backOne(){
-    if (slotOneState === 0){
+    if (slotOneState <= 0){
         alert("You can't go below your starting level!");
     } else {
     characterSlotOne.splice(slotOneState, 1);
@@ -537,7 +537,7 @@ function backOne(){
     }
 }
 function backTwo(){
-    if (slotTwoState === 0){
+    if (slotTwoState <= 0){
         alert("You can't go below your starting level!");
     } else {
     characterSlotTwo.splice(slotTwoState, 1);
@@ -546,7 +546,7 @@ function backTwo(){
     }
 }
 function backThree(){
-    if (slotThreeState === 0){
+    if (slotThreeState <= 0){
         alert("You can't go below your starting level!");
     } else {
     characterSlotThree.splice(slotThreeState, 1);
