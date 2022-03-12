@@ -47,101 +47,205 @@ let slotThreeState = 0;
 function addStatOne(stat) {
     //for some reason the array does overwrrites the old ones??? Weird
    let newLevel = Object.assign({},characterSlotOne[slotOneState])
+   if (newLevel.lvl === 713){
+       alert("You've hit the level cap in Elden Ring")
+   } else {
     if (stat === "Vigor"){
+        if (newLevel.vig === 99){
+            alert("You cannot level an attribute past 99, please select a new one")
+        } else {
         newLevel.vig++;
+        }
     }
     if (stat === "Endurance"){
+        if (newLevel.end === 99){
+            alert("You cannot level an attribute past 99, please select a new one")
+        } else {
         newLevel.end++;
+        }
     }
     if (stat === "Mind"){
+        if (newLevel.mnd === 99){
+            alert("You cannot level an attribute past 99, please select a new one")
+        } else {
         newLevel.mnd++;
+        }
     }
     if (stat === "Strength"){
+        if (newLevel.str === 99){
+            alert("You cannot level an attribute past 99, please select a new one")
+        } else {
         newLevel.str++;
+        }
     }
     if (stat === "Dexterity"){
+        if (newLevel.dex === 99){
+            alert("You cannot level an attribute past 99, please select a new one")
+        } else {
         newLevel.dex++;
+        }
     }
     if (stat === "Intelligence"){
+        if (newLevel.int === 99){
+            alert("You cannot level an attribute past 99, please select a new one")
+        } else {
         newLevel.int++;
+        }
     }
     if (stat === "Faith"){
+        if (newLevel.fth === 99){
+            alert("You cannot level an attribute past 99, please select a new one")
+        } else {
         newLevel.fth++;
+        }
     }
     if (stat === "Arcane"){
+        if (newLevel.arc === 99){
+            alert("You cannot level an attribute past 99, please select a new one")
+        } else {
         newLevel.arc++;
+        }
     }
     newLevel.lvl ++;
     characterSlotOne.push(newLevel);
     slotOneState++;
-    console.log(characterSlotOne);
     displaySlotOne(characterSlotOne[slotOneState]);
+    }
 }
 function addStatTwo(stat) {
-    //for some reason the array does overwrrites the old ones??? Weird
     let newLevel = Object.assign({},characterSlotTwo[slotTwoState]);
+    if (newLevel.lvl === 713){
+        alert("You've hit the level cap in Elden Ring")
+    } else {
     if (stat === "Vigor"){
+        if (newLevel.vig === 99){
+            alert("You cannot level an attribute past 99, please select a new one")
+        } else {
         newLevel.vig++;
+        }
     }
     if (stat === "Endurance"){
+        if (newLevel.end === 99){
+            alert("You cannot level an attribute past 99, please select a new one")
+        } else {
         newLevel.end++;
+        }
     }
     if (stat === "Mind"){
+        if (newLevel.mnd === 99){
+            alert("You cannot level an attribute past 99, please select a new one")
+        } else {
         newLevel.mnd++;
+        }
     }
     if (stat === "Strength"){
+        if (newLevel.str === 99){
+            alert("You cannot level an attribute past 99, please select a new one")
+        } else {
         newLevel.str++;
+        }
     }
     if (stat === "Dexterity"){
+        if (newLevel.dex === 99){
+            alert("You cannot level an attribute past 99, please select a new one")
+        } else {
         newLevel.dex++;
+        }
     }
     if (stat === "Intelligence"){
+        if (newLevel.int === 99){
+            alert("You cannot level an attribute past 99, please select a new one")
+        } else {
         newLevel.int++;
+        }
     }
     if (stat === "Faith"){
+        if (newLevel.fth === 99){
+            alert("You cannot level an attribute past 99, please select a new one")
+        } else {
         newLevel.fth++;
+        }
     }
     if (stat === "Arcane"){
+        if (newLevel.arc === 99){
+            alert("You cannot level an attribute past 99, please select a new one")
+        } else {
         newLevel.arc++;
+        }
     }
     newLevel.lvl ++;
     characterSlotTwo.push(newLevel);
     slotTwoState++;
-    console.log(characterSlotTwo);
     displaySlotTwo(characterSlotTwo[slotTwoState]);
+}
 }
 function addStatThree(stat) {
     //for some reason the array does overwrrites the old ones??? Weird
     let newLevel = Object.assign({}, characterSlotThree[slotThreeState]);
+    if (newLevel.lvl === 713){
+        alert("You've hit the level cap in Elden Ring")
+    } else {
     if (stat === "Vigor"){
+        if (newLevel.vig === 99){
+            alert("You cannot level an attribute past 99, please select a new one")
+        } else {
         newLevel.vig++;
+        }
     }
     if (stat === "Endurance"){
+        if (newLevel.end === 99){
+            alert("You cannot level an attribute past 99, please select a new one")
+        } else {
         newLevel.end++;
+        }
     }
     if (stat === "Mind"){
+        if (newLevel.mnd === 99){
+            alert("You cannot level an attribute past 99, please select a new one")
+        } else {
         newLevel.mnd++;
+        }
     }
     if (stat === "Strength"){
+        if (newLevel.str === 99){
+            alert("You cannot level an attribute past 99, please select a new one")
+        } else {
         newLevel.str++;
+        }
     }
     if (stat === "Dexterity"){
+        if (newLevel.dex === 99){
+            alert("You cannot level an attribute past 99, please select a new one")
+        } else {
         newLevel.dex++;
+        }
     }
     if (stat === "Intelligence"){
+        if (newLevel.int === 99){
+            alert("You cannot level an attribute past 99, please select a new one")
+        } else {
         newLevel.int++;
+        }
     }
     if (stat === "Faith"){
+        if (newLevel.fth === 99){
+            alert("You cannot level an attribute past 99, please select a new one")
+        } else {
         newLevel.fth++;
+        }
     }
     if (stat === "Arcane"){
+        if (newLevel.arc === 99){
+            alert("You cannot level an attribute past 99, please select a new one")
+        } else {
         newLevel.arc++;
+        }
     }
     newLevel.lvl ++;
     characterSlotThree.push(newLevel);
     slotThreeState++;
-    console.log(characterSlotThree);
     displaySlotThree(characterSlotThree[slotThreeState]);
+    }
 }
 function startCreation() {
     //checks if simple storage keys are empty or not first
