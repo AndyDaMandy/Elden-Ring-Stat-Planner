@@ -17,33 +17,32 @@
 <body>
     <div>
         <h1>Elden Ring Character Attribute Planner</h1>
-        <h2>View Class's Base Attributes:</h2>
-        <p><em>Click classes to view their base attributes</em></p>
-        <button id="vag-btn">Vagabond</button>
-        <button id="war-btn">Warrior</button>
-        <button id="hro-btn">Hero</button>
-        <button id="ban-btn">Bandit</button>
-        <button id="ast-btn">Astrologer</button>
-        <button id="pro-btn">Prophet</button>
-        <button id="sam-btn">Samurai</button>
-        <button id="pri-btn">Prisoner</button>
-        <button id="con-btn">Confessor</button>
-        <button id="wre-btn">Wretch</button>
-        <div>
-            <!--Generates base attributes and places into display-base-->
-            <div id="display-base"></div>
-            <hr>
-    </div>
+        <button onclick="document.getElementById('base-screen').hidden = false;">Show Base Attributes for Classes</button>
+        <div id="base-screen" hidden>
+            <h2>View Class's Base Attributes:</h2>
+            <p><em>Click classes to view their base attributes</em></p>
+            <button onclick="document.getElementById('base-screen').hidden = true;">Hide Base Attributes</button>
+            <button id="vag-btn">Vagabond</button>
+            <button id="war-btn">Warrior</button>
+            <button id="hro-btn">Hero</button>
+            <button id="ban-btn">Bandit</button>
+            <button id="ast-btn">Astrologer</button>
+            <button id="pro-btn">Prophet</button>
+            <button id="sam-btn">Samurai</button>
+            <button id="pri-btn">Prisoner</button>
+            <button id="con-btn">Confessor</button>
+            <button id="wre-btn">Wretch</button>
+            <div>
+                <!--Generates base attributes and places into display-base-->
+                <div id="display-base"></div>
+                <hr>
+            </div>
+        </div>
     <!-- dom manipulation below-->
     <div id="save-delete" hidden>
-        <h2>Save/Delete Data</h2>
+        <h2>Delete Data</h2>
         <p><em>Saving and loading uses local storage If you clear your browser data you will lose your data!</em></p>
-        <button onclick="document.getElementById('save-delete').hidden = true">Close Save/Delete Menu</button>
-        <h3>Save Buttons</h3>
-        <button id="save-button" onclick="saveData()">Save All Slot-Data</button>
-        <button onclick="saveOne()">Save Slot 1</button>
-        <button onclick="saveTwo()">Save Slot 2</button>
-        <button onclick="saveThree()">Save Slot 3</button>
+        <button onclick="document.getElementById('save-delete').hidden = true">Close Delete Menu</button>
         <h3>Delete Buttons</h3>
         <p><em>Warning! You cannot undo a delete! Be careful with your selection!</em></p>
         <button id="clear-button" onclick="clearData()">Clear All Slot-Data</button>
@@ -59,7 +58,8 @@
             <button id="slot-one" onclick="slotOneCheck()">Slot One</button>
             <button id="slot-two" onclick="slotTwoCheck()">Slot Two</button>
             <button id="slot-three" onclick="slotThreeCheck()">Slot Three</button>
-            <button id="show save" onclick="document.getElementById('save-delete').hidden = false">Save or Delete Slot Data</button>
+            <button id="save-button" onclick="saveData()">Save All Slot-Data</button>
+            <button id="show save" onclick="document.getElementById('save-delete').hidden = false">Show Delete Data Menu</button>
             
         </div>
         <div id="chooseClass-1" hidden>
@@ -102,7 +102,7 @@
             <button onclick="generateChar(wretch, 3)">Wretch</button>
         </div>
     </div>
-        <div id="display-slot-one" hidden>
+        <div class="slots" id="display-slot-one" hidden>
             <!--Displays your choice of class here-->
         </div>
         <div id="stat-boost-1"hidden>
@@ -118,8 +118,11 @@
             <button onclick="addStatOne('Faith')">Faith</button>
             <button onclick="addStatOne('Arcane')">Arcane</button>
             <button onclick="backOne()">Go Back a Level</button>
+            <button onclick="saveOne()">Save Slot 1</button>
+            <button onclick="document.getElementById('display-slot-one').hidden = true; document.getElementById('stat-boost-1').hidden = true;">Hide Slot 1</button>
+            <hr>
         </div>
-        <div id="display-slot-two" hidden>
+        <div class="slots" id="display-slot-two" hidden>
             <!--Displays your choice of class here-->
         </div>
         <div id="stat-boost-2"hidden>
@@ -135,8 +138,11 @@
             <button onclick="addStatTwo('Faith')">Faith</button>
             <button onclick="addStatTwo('Arcane')">Arcane</button>
             <button onclick="backTwo()">Go Back a Level</button>
+            <button onclick="saveTwo()">Save Slot 2</button>
+            <button onclick="document.getElementById('display-slot-two').hidden = true; document.getElementById('stat-boost-2').hidden = true;">Hide Slot 1</button>
+            <hr>
         </div>
-        <div id="display-slot-three" hidden>
+        <div class="slots" id="display-slot-three" hidden>
             <!--Displays your choice of class here-->
         </div>
         
@@ -153,6 +159,8 @@
             <button onclick="addStatThree('Faith')">Faith</button>
             <button onclick="addStatThree('Arcane')">Arcane</button>
             <button onclick="backThree()">Go Back a Level</button>
+            <button onclick="saveThree()">Save Slot 3</button>
+            <button onclick="document.getElementById('display-slot-three').hidden = true; document.getElementById('stat-boost-3').hidden = true;">Hide Slot 1</button>
         </div>
         <!-- planner div below-->
     </div>

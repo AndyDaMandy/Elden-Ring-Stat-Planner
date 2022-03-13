@@ -51,8 +51,9 @@ table {
 My CSS Below the Reset
 ========================
 */
+
 * {
-    margin: 5px;
+    margin: 10px;
 }
 html {
     font-size: 1rem;
@@ -64,14 +65,14 @@ html {
 h1 {
     font-size: 3.4em;
     font-style: bold;
-    margin: 15px;
+    margin: 20px;
 }
 h2 {
     font-size: 2em;
 }
 h3 {
-    font-size: 1.8em;
-    font-style: italic;
+    font-size: 1.9em;
+    font-style: bold;
 }
 p {
     font-size: 1.6em;
@@ -100,4 +101,17 @@ button {
 }
 button:hover {
     background-color: #af9443;
+}
+.slots {
+    margin: 15px;
+}
+
+@media (max-width: 400px){
+    h1 {
+        font-size: 3em;
+    }
+    button {
+        margin: 12px;
+        padding: 4px, 6px;
+    }
 }
