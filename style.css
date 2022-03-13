@@ -51,13 +51,20 @@ table {
 My CSS Below the Reset
 ========================
 */
-
+* {
+    margin: 5px;
+}
 html {
     font-size: 1rem;
     font-family: 'EB Garamond', serif;
+    background-color: #0A2627;
+    color: #F6D26A;
+    text-align: center;
 }
 h1 {
-    font-size: 3em;
+    font-size: 3.4em;
+    font-style: bold;
+    margin: 15px;
 }
 h2 {
     font-size: 2em;
@@ -76,9 +83,21 @@ li {
     list-style-type:square;
     font-size: 1.6em;
 }
-
+hr {
+    height: 2px;
+    background-color: #F6D26A;
+    border: none;
+}
 button {
     font-family: 'EB Garamond', serif;
     font-size: 1.2em;
     margin: 5px;
+    background-color: #F6D26A;
+    color: #0A2627;
+    border: none;
+    border-radius: 3px;
+    padding: 1px, 3px;
+}
+button:hover {
+    background-color: #af9443;
 }
