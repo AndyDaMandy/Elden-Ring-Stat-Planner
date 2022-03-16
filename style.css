@@ -99,6 +99,16 @@ button {
     border-radius: 3px;
     padding: 1px, 3px;
 }
+footer {
+    position: fixed;
+    bottom: 0;
+}
+a {
+    color:#F6D26A
+}
+a:hover {
+    color: #af9443;
+}
 button:hover {
     background-color: #af9443;
 }

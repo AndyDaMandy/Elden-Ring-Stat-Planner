@@ -554,3 +554,895 @@ function backThree(){
     displaySlotThree(characterSlotThree[slotThreeState]);
     }
 }
+
+function showVigor(stat){
+    let hp = 0;
+    if (stat === 1){
+        hp = 300;
+    }
+    if (stat === 2){
+        hp = 304;
+    }
+    if (stat === 3) {
+        hp = 312;
+    }
+    if (stat === 4){
+        
+    }
+    if (stat === 5){
+
+    }
+    if (stat === 6){
+
+    }
+    if (stat === 7){
+
+    }
+    if (stat === 8){
+
+    }
+    if (stat === 10){
+
+    }
+    if (stat === 11){
+
+    }
+    if (stat === 12){
+
+    }
+    if (stat === 13){
+
+    }
+    if (stat === 14){
+
+    }
+    if (stat === 15){
+
+    }
+    if (stat === 16){
+
+    }
+    if (stat === 17){
+
+    }
+    if (stat === 18){
+
+    }
+    if (stat === 19){
+
+    }
+    if (stat === 20){
+
+    }
+    if (stat === 21){
+        hp = 300;
+    }
+    if (stat === 22){
+        hp = 304;
+    }
+    if (stat === 23) {
+        hp = 312;
+    }
+    if (stat === 24){
+
+    }
+    if (stat === 25){
+
+    }
+    if (stat === 26){
+
+    }
+    if (stat === 27){
+
+    }
+    if (stat === 28){
+
+    }
+    if (stat === 29){
+
+    }
+    if (stat === 30){
+
+    }
+    if (stat === 31){
+
+    }
+    if (stat === 32){
+
+    }
+    if (stat === 33){
+
+    }
+    if (stat === 34){
+
+    }
+    if (stat === 35){
+
+    }
+    if (stat === 36){
+
+    }
+    if (stat === 37){
+
+    }
+    if (stat === 38){
+
+    }
+    if (stat === 39){
+
+    }
+    if (stat === 40){
+        hp = 300;
+    }
+    if (stat === 41){
+        hp = 304;
+    }
+    if (stat === 42) {
+        hp = 312;
+    }
+    if (stat === 43){
+
+    }
+    if (stat === 44){
+
+    }
+    if (stat === 45){
+
+    }
+    if (stat === 46){
+
+    }
+    if (stat === 47){
+
+    }
+    if (stat === 48){
+
+    }
+    if (stat === 49){
+
+    }
+    if (stat === 50){
+
+    }
+    if (stat === 51){
+
+    }
+    if (stat === 52){
+
+    }
+    if (stat === 53){
+
+    }
+    if (stat === 54){
+
+    }
+    if (stat === 55){
+
+    }
+    if (stat === 56){
+
+    }
+    if (stat === 57){
+
+    }
+    if (stat === 58){
+
+    }
+    if (stat === 59){
+        hp = 300;
+    }
+    if (stat === 60){
+        hp = 304;
+    }
+    if (stat === 61) {
+        hp = 312;
+    }
+    if (stat === 62){
+
+    }
+    if (stat === 63){
+
+    }
+    if (stat === 64){
+
+    }
+    if (stat === 65){
+
+    }
+    if (stat === 66){
+
+    }
+    if (stat === 67){
+
+    }
+    if (stat === 68){
+
+    }
+    if (stat === 69){
+
+    }
+    if (stat === 70){
+
+    }
+    if (stat === 71){
+
+    }
+    if (stat === 72){
+
+    }
+    if (stat === 73){
+
+    }
+    if (stat === 74){
+
+    }
+    if (stat === 75){
+
+    }
+    if (stat === 76){
+
+    }
+    if (stat === 77){
+
+    }
+    if (stat === 78){
+        hp = 300;
+    }
+    if (stat === 79){
+        hp = 304;
+    }
+    if (stat === 80) {
+        hp = 312;
+    }
+    if (stat === 81){
+
+    }
+    if (stat === 82){
+
+    }
+    if (stat === 83){
+
+    }
+    if (stat === 84){
+
+    }
+    if (stat === 85){
+
+    }
+    if (stat === 86){
+
+    }
+    if (stat === 87){
+
+    }
+    if (stat === 88){
+
+    }
+    if (stat === 89){
+
+    }
+    if (stat === 90){
+
+    }
+    if (stat === 91){
+
+    }
+    if (stat === 92){
+
+    }
+    if (stat === 93){
+
+    }
+    if (stat === 94){
+
+    }
+    if (stat === 95){
+
+    }
+    if (stat === 96){
+
+    }
+    if (stat === 97){
+
+    }
+    if (stat === 98){
+
+    }
+    if (stat >= 99){
+
+    }
+};
+function showMind(stat){
+    let hp = 0;
+    if (stat === 1){
+        hp = 300;
+    }
+    if (stat === 2){
+        hp = 304;
+    }
+    if (stat === 3) {
+        hp = 312;
+    }
+    if (stat === 4){
+
+    }
+    if (stat === 5){
+
+    }
+    if (stat === 6){
+
+    }
+    if (stat === 7){
+
+    }
+    if (stat === 8){
+
+    }
+    if (stat === 10){
+
+    }
+    if (stat === 11){
+
+    }
+    if (stat === 12){
+
+    }
+    if (stat === 13){
+
+    }
+    if (stat === 14){
+
+    }
+    if (stat === 15){
+
+    }
+    if (stat === 16){
+
+    }
+    if (stat === 17){
+
+    }
+    if (stat === 18){
+
+    }
+    if (stat === 19){
+
+    }
+    if (stat === 20){
+
+    }
+    if (stat === 21){
+        hp = 300;
+    }
+    if (stat === 22){
+        hp = 304;
+    }
+    if (stat === 23) {
+        hp = 312;
+    }
+    if (stat === 24){
+
+    }
+    if (stat === 25){
+
+    }
+    if (stat === 26){
+
+    }
+    if (stat === 27){
+
+    }
+    if (stat === 28){
+
+    }
+    if (stat === 29){
+
+    }
+    if (stat === 30){
+
+    }
+    if (stat === 31){
+
+    }
+    if (stat === 32){
+
+    }
+    if (stat === 33){
+
+    }
+    if (stat === 34){
+
+    }
+    if (stat === 35){
+
+    }
+    if (stat === 36){
+
+    }
+    if (stat === 37){
+
+    }
+    if (stat === 38){
+
+    }
+    if (stat === 39){
+
+    }
+    if (stat === 40){
+        hp = 300;
+    }
+    if (stat === 41){
+        hp = 304;
+    }
+    if (stat === 42) {
+        hp = 312;
+    }
+    if (stat === 43){
+
+    }
+    if (stat === 44){
+
+    }
+    if (stat === 45){
+
+    }
+    if (stat === 46){
+
+    }
+    if (stat === 47){
+
+    }
+    if (stat === 48){
+
+    }
+    if (stat === 49){
+
+    }
+    if (stat === 50){
+
+    }
+    if (stat === 51){
+
+    }
+    if (stat === 52){
+
+    }
+    if (stat === 53){
+
+    }
+    if (stat === 54){
+
+    }
+    if (stat === 55){
+
+    }
+    if (stat === 56){
+
+    }
+    if (stat === 57){
+
+    }
+    if (stat === 58){
+
+    }
+    if (stat === 59){
+        hp = 300;
+    }
+    if (stat === 60){
+        hp = 304;
+    }
+    if (stat === 61) {
+        hp = 312;
+    }
+    if (stat === 62){
+
+    }
+    if (stat === 63){
+
+    }
+    if (stat === 64){
+
+    }
+    if (stat === 65){
+
+    }
+    if (stat === 66){
+
+    }
+    if (stat === 67){
+
+    }
+    if (stat === 68){
+
+    }
+    if (stat === 69){
+
+    }
+    if (stat === 70){
+
+    }
+    if (stat === 71){
+
+    }
+    if (stat === 72){
+
+    }
+    if (stat === 73){
+
+    }
+    if (stat === 74){
+
+    }
+    if (stat === 75){
+
+    }
+    if (stat === 76){
+
+    }
+    if (stat === 77){
+
+    }
+    if (stat === 78){
+        hp = 300;
+    }
+    if (stat === 79){
+        hp = 304;
+    }
+    if (stat === 80) {
+        hp = 312;
+    }
+    if (stat === 81){
+
+    }
+    if (stat === 82){
+
+    }
+    if (stat === 83){
+
+    }
+    if (stat === 84){
+
+    }
+    if (stat === 85){
+
+    }
+    if (stat === 86){
+
+    }
+    if (stat === 87){
+
+    }
+    if (stat === 88){
+
+    }
+    if (stat === 89){
+
+    }
+    if (stat === 90){
+
+    }
+    if (stat === 91){
+
+    }
+    if (stat === 92){
+
+    }
+    if (stat === 93){
+
+    }
+    if (stat === 94){
+
+    }
+    if (stat === 95){
+
+    }
+    if (stat === 96){
+
+    }
+    if (stat === 97){
+
+    }
+    if (stat === 98){
+
+    }
+    if (stat >= 99){
+
+    }
+};
+function showStamina(stat){
+    let hp = 0;
+    if (stat === 1){
+        hp = 300;
+    }
+    if (stat === 2){
+        hp = 304;
+    }
+    if (stat === 3) {
+        hp = 312;
+    }
+    if (stat === 4){
+
+    }
+    if (stat === 5){
+
+    }
+    if (stat === 6){
+
+    }
+    if (stat === 7){
+
+    }
+    if (stat === 8){
+
+    }
+    if (stat === 10){
+
+    }
+    if (stat === 11){
+
+    }
+    if (stat === 12){
+
+    }
+    if (stat === 13){
+
+    }
+    if (stat === 14){
+
+    }
+    if (stat === 15){
+
+    }
+    if (stat === 16){
+
+    }
+    if (stat === 17){
+
+    }
+    if (stat === 18){
+
+    }
+    if (stat === 19){
+
+    }
+    if (stat === 20){
+
+    }
+    if (stat === 21){
+        hp = 300;
+    }
+    if (stat === 22){
+        hp = 304;
+    }
+    if (stat === 23) {
+        hp = 312;
+    }
+    if (stat === 24){
+
+    }
+    if (stat === 25){
+
+    }
+    if (stat === 26){
+
+    }
+    if (stat === 27){
+
+    }
+    if (stat === 28){
+
+    }
+    if (stat === 29){
+
+    }
+    if (stat === 30){
+
+    }
+    if (stat === 31){
+
+    }
+    if (stat === 32){
+
+    }
+    if (stat === 33){
+
+    }
+    if (stat === 34){
+
+    }
+    if (stat === 35){
+
+    }
+    if (stat === 36){
+
+    }
+    if (stat === 37){
+
+    }
+    if (stat === 38){
+
+    }
+    if (stat === 39){
+
+    }
+    if (stat === 40){
+        hp = 300;
+    }
+    if (stat === 41){
+        hp = 304;
+    }
+    if (stat === 42) {
+        hp = 312;
+    }
+    if (stat === 43){
+
+    }
+    if (stat === 44){
+
+    }
+    if (stat === 45){
+
+    }
+    if (stat === 46){
+
+    }
+    if (stat === 47){
+
+    }
+    if (stat === 48){
+
+    }
+    if (stat === 49){
+
+    }
+    if (stat === 50){
+
+    }
+    if (stat === 51){
+
+    }
+    if (stat === 52){
+
+    }
+    if (stat === 53){
+
+    }
+    if (stat === 54){
+
+    }
+    if (stat === 55){
+
+    }
+    if (stat === 56){
+
+    }
+    if (stat === 57){
+
+    }
+    if (stat === 58){
+
+    }
+    if (stat === 59){
+        hp = 300;
+    }
+    if (stat === 60){
+        hp = 304;
+    }
+    if (stat === 61) {
+        hp = 312;
+    }
+    if (stat === 62){
+
+    }
+    if (stat === 63){
+
+    }
+    if (stat === 64){
+
+    }
+    if (stat === 65){
+
+    }
+    if (stat === 66){
+
+    }
+    if (stat === 67){
+
+    }
+    if (stat === 68){
+
+    }
+    if (stat === 69){
+
+    }
+    if (stat === 70){
+
+    }
+    if (stat === 71){
+
+    }
+    if (stat === 72){
+
+    }
+    if (stat === 73){
+
+    }
+    if (stat === 74){
+
+    }
+    if (stat === 75){
+
+    }
+    if (stat === 76){
+
+    }
+    if (stat === 77){
+
+    }
+    if (stat === 78){
+        hp = 300;
+    }
+    if (stat === 79){
+        hp = 304;
+    }
+    if (stat === 80) {
+        hp = 312;
+    }
+    if (stat === 81){
+
+    }
+    if (stat === 82){
+
+    }
+    if (stat === 83){
+
+    }
+    if (stat === 84){
+
+    }
+    if (stat === 85){
+
+    }
+    if (stat === 86){
+
+    }
+    if (stat === 87){
+
+    }
+    if (stat === 88){
+
+    }
+    if (stat === 89){
+
+    }
+    if (stat === 90){
+
+    }
+    if (stat === 91){
+
+    }
+    if (stat === 92){
+
+    }
+    if (stat === 93){
+
+    }
+    if (stat === 94){
+
+    }
+    if (stat === 95){
+
+    }
+    if (stat === 96){
+
+    }
+    if (stat === 97){
+
+    }
+    if (stat === 98){
+
+    }
+    if (stat >= 99){
+
+    }
+};
