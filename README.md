@@ -1,6 +1,6 @@
 # Elden-Ring-Stat-Planner
 
-https://www.andresmaldonado.art/Elden-Ring-Stat-Planner/
+https://andydamandy.github.io/Elden-Ring-Stat-Planner/
 
 It's a simple tool to help you build your character. First select your base stats and then begin building from there.
 
